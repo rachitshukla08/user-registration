@@ -17,16 +17,25 @@ public class UserRegistration {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Welcome to user registration");
-		System.out.println("Please enter your name:");
-		String name = sc.nextLine();
-
-		String pattern = "[A-Z]{1}[a-zA-Z]{2,}";
 		
-		if(name.matches(pattern))
-			System.out.println("Valid name");
+		System.out.println("Welcome to user registration");
+		
+		System.out.println("Please enter your first name:");
+		String firstName = sc.nextLine();
+		System.out.println("Please enter your last name:");
+		String lastName = sc.nextLine();
+
+		String pattern = "^[A-Z]{1}[a-zA-Z]{2,}";
+		
+		if(firstName.matches(pattern))
+			System.out.println("Valid first name");
 		else 
-			System.out.println("Invalid name");
+			System.out.println("Invalid first name");
+		
+		if(lastName.matches(pattern))
+			System.out.println("Valid last name");
+		else 
+			System.out.println("Invalid last name");
 	}
 
 }
