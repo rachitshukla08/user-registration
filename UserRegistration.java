@@ -24,18 +24,27 @@ public class UserRegistration {
 		String firstName = sc.nextLine();
 		System.out.println("Please enter your last name:");
 		String lastName = sc.nextLine();
-
-		String pattern = "^[A-Z]{1}[a-zA-Z]{2,}";
+		System.out.println("Enter Email ID");
+		String email = sc.nextLine();
 		
-		if(firstName.matches(pattern))
+		String namePattern = "^[A-Z]{1}[a-zA-Z]{2,}";
+		
+		if(firstName.matches(namePattern))
 			System.out.println("Valid first name");
 		else 
 			System.out.println("Invalid first name");
 		
-		if(lastName.matches(pattern))
+		if(lastName.matches(namePattern))
 			System.out.println("Valid last name");
 		else 
 			System.out.println("Invalid last name");
+		
+		String emailPattern = "^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+)([.][a-z]+)?[.][a-z]{2,}$";
+		
+		if(email.matches(emailPattern))
+			System.out.println("Valid email");
+		else 
+			System.out.println("Invalid email");
 	}
 
 }
