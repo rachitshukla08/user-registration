@@ -26,9 +26,15 @@ public class UserRegistration {
 		String lastName = sc.nextLine();
 		System.out.println("Enter Email ID");
 		String email = sc.nextLine();
+		System.out.println("Enter Mobile number");
+		String mobile = sc.nextLine();
+		//Inputs
 		
 		String namePattern = "^[A-Z]{1}[a-zA-Z]{2,}";
-		
+		String emailPattern = "^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+)([.][a-z]+)?[.][a-z]{2,}$";
+		String mobilePattern = "[0-9-]{1,}[ ][1-9]{1}[0-9]{9}";
+		//Patterns
+				
 		if(firstName.matches(namePattern))
 			System.out.println("Valid first name");
 		else 
@@ -39,12 +45,17 @@ public class UserRegistration {
 		else 
 			System.out.println("Invalid last name");
 		
-		String emailPattern = "^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+)([.][a-z]+)?[.][a-z]{2,}$";
-		
 		if(email.matches(emailPattern))
 			System.out.println("Valid email");
 		else 
 			System.out.println("Invalid email");
+		
+		if(mobile.matches(mobilePattern))
+			System.out.println("Valid Mobile Number");
+		else 
+			System.out.println("Invalid Mobile Number");
+		//Verification
+		
 	}
 
 }
