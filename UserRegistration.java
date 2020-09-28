@@ -28,11 +28,14 @@ public class UserRegistration {
 		String email = sc.nextLine();
 		System.out.println("Enter Mobile number");
 		String mobile = sc.nextLine();
+		System.out.println("Enter password");
+		String password = sc.nextLine();
 		//Inputs
 		
 		String namePattern = "^[A-Z]{1}[a-zA-Z]{2,}";
 		String emailPattern = "^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+)([.][a-z]+)?[.][a-z]{2,}$";
 		String mobilePattern = "[0-9-]{1,}[ ][1-9]{1}[0-9]{9}";
+		String passwordPattern = ".{8,}";
 		//Patterns
 				
 		if(firstName.matches(namePattern))
@@ -54,6 +57,11 @@ public class UserRegistration {
 			System.out.println("Valid Mobile Number");
 		else 
 			System.out.println("Invalid Mobile Number");
+		
+		if(password.matches(passwordPattern))
+			System.out.println("Valid password");
+		else 
+			System.out.println("Invalid password");
 		//Verification
 		
 	}
