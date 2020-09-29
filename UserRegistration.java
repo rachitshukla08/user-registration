@@ -39,7 +39,7 @@ public class UserRegistration {
 		else 
 			System.out.println("Invalid last name");
 		
-		String emailPattern = "^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+)([.][a-z]+)?[.][a-z]{2,}$";
+		String emailPattern = "^(abc)+[a-zA-Z0-9_.+-]*@bl[.]co[.][a-z]{2}$";
 		
 		if(email.matches(emailPattern))
 			System.out.println("Valid email");
