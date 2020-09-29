@@ -41,7 +41,8 @@ public class UserRegistration {
 		String namePattern = "^[A-Z]{1}[a-zA-Z]{2,}";
 		String emailPattern = "^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+)([.][a-z]+)?[.][a-z]{2,}$";
 		String mobilePattern = "[0-9-]{1,}[ ][1-9]{1}[0-9]{9}";
-		String passwordPattern = "(?=.*[A-Z]+)(?=.*[0-9]+)(?=.*\\W).{8,}$";
+		//String passwordPattern = "(?=.*[A-Z]+)(?=.*[0-9]+)(?=.*\\W).{8,}$";
+		String passwordPattern = "^(?=.*\\d)(?=.*[A-Z])(?=.*\\W)(?!.*\\W\\w*\\W)(?!.*\\s).{8,}$";
 		// Patterns
 
 		if (firstName.matches(namePattern))
